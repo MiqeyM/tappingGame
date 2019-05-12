@@ -4,12 +4,12 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.android.tappinggame.R
-import com.example.android.tappinggame.entity.ScoreEntry
+import com.example.android.tappinggame.database.ScoreEntry
 
 class ScoreAdapter : RecyclerView.Adapter<ScoreViewHolder>(){
 
-    var items:List<ScoreEntry> = emptyList<ScoreEntry>()
-    set(value) {
+    private var items:List<ScoreEntry> = emptyList()
+        set(value) {
         field = value
         notifyDataSetChanged()
     }

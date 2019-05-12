@@ -4,10 +4,9 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import com.example.android.tappinggame.entity.ScoreEntry
 
 @Database(entities = [ScoreEntry::class], version = 1, exportSchema = false)
-public abstract class ScoresRoomDatabase : RoomDatabase() {
+abstract class ScoresRoomDatabase : RoomDatabase() {
     abstract fun scoreDao() : ScoreDao
 
     companion object{
@@ -23,7 +22,7 @@ public abstract class ScoresRoomDatabase : RoomDatabase() {
                 val instance = Room.databaseBuilder(
                     context.applicationContext,
                     ScoresRoomDatabase::class.java,
-                    "Word_database"
+                    "scores_database"
                 ).build()
                 INSTANCE = instance
                 return instance
