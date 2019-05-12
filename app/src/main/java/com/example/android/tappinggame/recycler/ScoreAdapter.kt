@@ -6,13 +6,13 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.android.tappinggame.R
 import com.example.android.tappinggame.database.ScoreEntry
 
-class ScoreAdapter : RecyclerView.Adapter<ScoreViewHolder>(){
+class ScoreAdapter : RecyclerView.Adapter<ScoreViewHolder>() {
 
-    private var items:List<ScoreEntry> = emptyList()
+    private var items: List<ScoreEntry> = emptyList()
         set(value) {
-        field = value
-        notifyDataSetChanged()
-    }
+            field = value
+            notifyDataSetChanged()
+        }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ScoreViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.viewholder_score, parent, false)
@@ -23,13 +23,20 @@ class ScoreAdapter : RecyclerView.Adapter<ScoreViewHolder>(){
 
     override fun onBindViewHolder(holder: ScoreViewHolder, position: Int) = holder.bind(items[position])
 
-    fun setScores(scores: List<ScoreEntry>){
+    fun setScores(scores: List<ScoreEntry>) {
         this.items = scores
         notifyDataSetChanged()
     }
 
-    companion object{
-        private val MAX_DISPLAYED_RECORDS = 5;
+    fun getSmallestDisplayedScore(): ScoreEntry? {
+        if (items.isNotEmpty()) {
+            return this.items[Math.min(MAX_DISPLAYED_RECORDS, items.size - 1)]
+        } else return null
+
+    }
+
+    companion object {
+        private val MAX_DISPLAYED_RECORDS = 5
     }
 
 

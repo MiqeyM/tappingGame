@@ -16,13 +16,13 @@
               app:layout_constraintBottom_toBottomOf="parent"
               tools:text="3..."
               android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-              android:id="@+id/counter_text_view"
+              android:id="@+id/counterTextView"
               android:visibility="visible"/>
 
     <TextView android:layout_width="wrap_content"
               android:layout_height="wrap_content"
-              android:id="@+id/points_text_view"
-              app:layout_constraintTop_toBottomOf="@+id/timer_text_view"
+              android:id="@+id/pointsTextView"
+              app:layout_constraintTop_toBottomOf="@+id/timerTextView"
               app:layout_constraintBottom_toBottomOf="parent"
               app:layout_constraintEnd_toEndOf="parent"
               app:layout_constraintStart_toStartOf="parent"
@@ -33,9 +33,9 @@
     />
     <TextView android:layout_width="wrap_content"
               android:layout_height="wrap_content"
-              android:id="@+id/timer_text_view"
+              android:id="@+id/timerTextView"
               app:layout_constraintTop_toTopOf="parent"
-              app:layout_constraintBottom_toTopOf="@+id/points_text_view"
+              app:layout_constraintBottom_toTopOf="@+id/pointsTextView"
               app:layout_constraintEnd_toEndOf="parent"
               app:layout_constraintStart_toStartOf="parent"
               android:visibility="invisible"

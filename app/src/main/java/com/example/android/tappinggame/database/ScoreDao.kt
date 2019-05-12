@@ -11,8 +11,6 @@ interface ScoreDao {
     @Insert
     suspend fun insert(scoreEntry: ScoreEntry)
 
-
-    //TODO: Put sorting into different place with validation
     @Query("SELECT * from scores_table ORDER BY points DESC")
     fun getScores(): LiveData<List<ScoreEntry>>
 

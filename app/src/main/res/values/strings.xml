@@ -3,4 +3,7 @@
     <string name="game_title">DaftTap Challenge</string>
     <string name="play_text">play</string>
     <string name="play_text_message">PLAY</string>
+    <string name="final_score_message">Your final score:</string>
+    <string name="alert_ok">OK</string>
+    <string name="alert_highscore_message">"Congrats you have made it to the scoreboard!\n Your Final score:"</string>
 </resources>

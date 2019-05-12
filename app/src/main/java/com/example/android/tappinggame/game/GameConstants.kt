@@ -7,7 +7,5 @@ object GameConstants {
 
     const val GAME_TIME = 5000L
 
-    const val GAME_RUNNING = true
-
-    const val GAME_OFFLINE = false
+    const val GAME_RESULT_REQUEST = 1
 }
