@@ -11,6 +11,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/game_title"
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline"
             android:id="@+id/title_text_view"
             app:layout_constraintBottom_toTopOf="@id/play_button"
             app:layout_constraintEnd_toEndOf="parent"

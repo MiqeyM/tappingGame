@@ -19,7 +19,18 @@ class ScoreAdapter : RecyclerView.Adapter<ScoreViewHolder>(){
         return ScoreViewHolder(view)
     }
 
-    override fun getItemCount(): Int = items.size
+    override fun getItemCount(): Int = Math.min(items.size, MAX_DISPLAYED_RECORDS)
 
     override fun onBindViewHolder(holder: ScoreViewHolder, position: Int) = holder.bind(items[position])
+
+    fun setScores(scores: List<ScoreEntry>){
+        this.items = scores
+        notifyDataSetChanged()
+    }
+
+    companion object{
+        private val MAX_DISPLAYED_RECORDS = 5;
+    }
+
+
 }

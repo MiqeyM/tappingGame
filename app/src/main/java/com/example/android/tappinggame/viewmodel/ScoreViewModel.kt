@@ -13,7 +13,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
 
-class ScoreViewModel(application: Application) : ViewModel() {
+class ScoreViewModel(application: Application) : AndroidViewModel(application) {
 
     private val repository : ScoresRepository
     val allScores: LiveData<List<ScoreEntry>>
@@ -27,5 +27,7 @@ class ScoreViewModel(application: Application) : ViewModel() {
     fun insert(score: ScoreEntry) =  viewModelScope.launch(Dispatchers.IO){
         repository.insert(score)
     }
+
+
 }
 

@@ -2,4 +2,5 @@
     <string name="app_name">TappingGame</string>
     <string name="game_title">DaftTap Challenge</string>
     <string name="play_text">play</string>
+    <string name="play_text_message">PLAY</string>
 </resources>
